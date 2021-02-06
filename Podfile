@@ -8,6 +8,7 @@ target 'MTMsTask' do
   # Pods for MTMsTask
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'Kingfisher', '~> 6.0'
 
   target 'MTMsTaskTests' do
     inherit! :search_paths

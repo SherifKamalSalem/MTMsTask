@@ -46,33 +46,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5uk-E9-7tr">
-                                <rect key="frame" x="24" y="617" width="327" height="50"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9c-3V-DYa">
-                                        <rect key="frame" x="0.0" y="0.0" width="155.5" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <state key="normal" title="Accept">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O94-UV-JrE">
-                                        <rect key="frame" x="171.5" y="0.0" width="155.5" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <state key="normal" title="Reject">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="xLu-xb-C8P"/>
-                                </constraints>
-                            </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tuy-uN-e0v">
-                                <rect key="frame" x="0.0" y="44" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yoU-5b-30O" id="4KI-Ui-FNw"/>
+                                    <outlet property="delegate" destination="yoU-5b-30O" id="3as-da-DZX"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIY-qc-2Cr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -99,20 +79,17 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="WIY-qc-2Cr" firstAttribute="leading" secondItem="9ny-Jk-tUY" secondAttribute="leading" id="2Yf-S7-FvA"/>
-                            <constraint firstItem="9ny-Jk-tUY" firstAttribute="trailing" secondItem="5uk-E9-7tr" secondAttribute="trailing" constant="24" id="EOW-aW-kzv"/>
-                            <constraint firstItem="5uk-E9-7tr" firstAttribute="leading" secondItem="9ny-Jk-tUY" secondAttribute="leading" constant="24" id="EgI-dv-xuz"/>
-                            <constraint firstItem="5uk-E9-7tr" firstAttribute="centerX" secondItem="9ny-Jk-tUY" secondAttribute="centerX" id="dsO-jh-FO3"/>
-                            <constraint firstItem="9ny-Jk-tUY" firstAttribute="bottom" secondItem="5uk-E9-7tr" secondAttribute="bottom" id="fbi-Yn-qhF"/>
                             <constraint firstItem="Tuy-uN-e0v" firstAttribute="top" secondItem="WIY-qc-2Cr" secondAttribute="bottom" id="mea-d7-O8v"/>
                             <constraint firstAttribute="trailing" secondItem="WIY-qc-2Cr" secondAttribute="trailing" id="t7V-Py-JXi"/>
                             <constraint firstAttribute="trailing" secondItem="Tuy-uN-e0v" secondAttribute="trailing" id="t91-05-iaV"/>
-                            <constraint firstItem="5uk-E9-7tr" firstAttribute="top" secondItem="Tuy-uN-e0v" secondAttribute="bottom" constant="20" id="tWD-UY-G0p"/>
                             <constraint firstItem="Tuy-uN-e0v" firstAttribute="leading" secondItem="9ny-Jk-tUY" secondAttribute="leading" id="w8d-yu-8tJ"/>
+                            <constraint firstItem="Tuy-uN-e0v" firstAttribute="bottom" secondItem="9ny-Jk-tUY" secondAttribute="bottom" id="zLP-uF-OEz"/>
                             <constraint firstItem="WIY-qc-2Cr" firstAttribute="top" secondItem="9ny-Jk-tUY" secondAttribute="top" id="zkI-uf-Drb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="slideUpView" destination="WIY-qc-2Cr" id="sOg-t2-abT"/>
+                        <outlet property="tableView" destination="Tuy-uN-e0v" id="7hN-Ob-REN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMS-P3-SbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,12 +118,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
