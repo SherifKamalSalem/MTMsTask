@@ -79,7 +79,7 @@ class BottomViewController: UIViewController, UIGestureRecognizerDelegate {
 
     func maximize(completion: (() -> Void)?) {
         UIView.animate(withDuration: 0.2, animations: {
-            self.moveToY(40)
+            self.moveToY(150)
         }) { _ in
             if let completion = completion {
                 completion()
@@ -99,7 +99,6 @@ class BottomViewController: UIViewController, UIGestureRecognizerDelegate {
 
     private func moveToY(_ position: CGFloat) {
         view.frame = CGRect(x: 0, y: position, width: view.frame.width, height: view.frame.height)
-
         let maxHeight = view.frame.height - closeThresholdHeight
         let percentage = Int(100 - ((position * 100) / maxHeight))
         gotPanned(percentage)
