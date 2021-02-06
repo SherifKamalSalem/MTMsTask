@@ -15,6 +15,8 @@
 		98B60A8F25CEFF7600EF021D /* MTMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B60A8E25CEFF7600EF021D /* MTMRequest.swift */; };
 		98B60A9425CF004E00EF021D /* MTMDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B60A9325CF004E00EF021D /* MTMDriver.swift */; };
 		98B60A9B25CF072100EF021D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B60A9A25CF072100EF021D /* UIViewExtension.swift */; };
+		98B60AB725CF5C5B00EF021D /* BottomViewController+UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B60AB625CF5C5B00EF021D /* BottomViewController+UITableViewExtension.swift */; };
+		98B60AC625CF5C9100EF021D /* MainViewController+LocationManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B60AC525CF5C9100EF021D /* MainViewController+LocationManagerExtensions.swift */; };
 		98F95D0D25CD01BB0007C695 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F95D0C25CD01BB0007C695 /* AppDelegate.swift */; };
 		98F95D0F25CD01BB0007C695 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F95D0E25CD01BB0007C695 /* SceneDelegate.swift */; };
 		98F95D1425CD01BB0007C695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F95D1225CD01BB0007C695 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		98B60A8E25CEFF7600EF021D /* MTMRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMRequest.swift; sourceTree = "<group>"; };
 		98B60A9325CF004E00EF021D /* MTMDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMDriver.swift; sourceTree = "<group>"; };
 		98B60A9A25CF072100EF021D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		98B60AB625CF5C5B00EF021D /* BottomViewController+UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomViewController+UITableViewExtension.swift"; sourceTree = "<group>"; };
+		98B60AC525CF5C9100EF021D /* MainViewController+LocationManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+LocationManagerExtensions.swift"; sourceTree = "<group>"; };
 		98F95D0925CD01BB0007C695 /* MTMsTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTMsTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F95D0C25CD01BB0007C695 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98F95D0E25CD01BB0007C695 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +148,24 @@
 			path = "../New Group/Extensions";
 			sourceTree = "<group>";
 		};
+		98B60AB525CF5C3B00EF021D /* BottomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				98FDD5E225CDF37100BC743A /* BottomViewController.swift */,
+				98B60AB625CF5C5B00EF021D /* BottomViewController+UITableViewExtension.swift */,
+			);
+			path = BottomViewController;
+			sourceTree = "<group>";
+		};
+		98B60ABE25CF5C6A00EF021D /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				98FDD5DC25CDBF8700BC743A /* MainViewController.swift */,
+				98B60AC525CF5C9100EF021D /* MainViewController+LocationManagerExtensions.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
 		98F95D0025CD01BB0007C695 = {
 			isa = PBXGroup;
 			children = (
@@ -222,8 +244,8 @@
 		98FDD5DB25CDBE1300BC743A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				98FDD5DC25CDBF8700BC743A /* MainViewController.swift */,
-				98FDD5E225CDF37100BC743A /* BottomViewController.swift */,
+				98B60ABE25CF5C6A00EF021D /* MainViewController */,
+				98B60AB525CF5C3B00EF021D /* BottomViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -480,8 +502,10 @@
 			files = (
 				98B60A8F25CEFF7600EF021D /* MTMRequest.swift in Sources */,
 				98F95D0D25CD01BB0007C695 /* AppDelegate.swift in Sources */,
+				98B60AC625CF5C9100EF021D /* MainViewController+LocationManagerExtensions.swift in Sources */,
 				98FDD5E325CDF37100BC743A /* BottomViewController.swift in Sources */,
 				98B60A5225CE9DB200EF021D /* RequestCell.swift in Sources */,
+				98B60AB725CF5C5B00EF021D /* BottomViewController+UITableViewExtension.swift in Sources */,
 				98F95D0F25CD01BB0007C695 /* SceneDelegate.swift in Sources */,
 				98B60A9425CF004E00EF021D /* MTMDriver.swift in Sources */,
 				98B60A9B25CF072100EF021D /* UIViewExtension.swift in Sources */,

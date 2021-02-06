@@ -78,23 +78,26 @@
                         <viewLayoutGuide key="safeArea" id="9ny-Jk-tUY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="WIY-qc-2Cr" firstAttribute="leading" secondItem="2yc-WG-11s" secondAttribute="leading" id="1uv-TY-cHJ"/>
                             <constraint firstItem="WIY-qc-2Cr" firstAttribute="leading" secondItem="9ny-Jk-tUY" secondAttribute="leading" id="2Yf-S7-FvA"/>
-                            <constraint firstItem="Tuy-uN-e0v" firstAttribute="top" secondItem="WIY-qc-2Cr" secondAttribute="bottom" id="mea-d7-O8v"/>
+                            <constraint firstAttribute="trailing" secondItem="WIY-qc-2Cr" secondAttribute="trailing" id="Nfh-EA-hgB"/>
+                            <constraint firstItem="Tuy-uN-e0v" firstAttribute="top" secondItem="WIY-qc-2Cr" secondAttribute="bottom" id="OMH-ci-hZy"/>
+                            <constraint firstItem="WIY-qc-2Cr" firstAttribute="top" secondItem="2yc-WG-11s" secondAttribute="top" id="aAx-7k-YHu"/>
                             <constraint firstAttribute="trailing" secondItem="WIY-qc-2Cr" secondAttribute="trailing" id="t7V-Py-JXi"/>
                             <constraint firstAttribute="trailing" secondItem="Tuy-uN-e0v" secondAttribute="trailing" id="t91-05-iaV"/>
                             <constraint firstItem="Tuy-uN-e0v" firstAttribute="leading" secondItem="9ny-Jk-tUY" secondAttribute="leading" id="w8d-yu-8tJ"/>
                             <constraint firstItem="Tuy-uN-e0v" firstAttribute="bottom" secondItem="9ny-Jk-tUY" secondAttribute="bottom" id="zLP-uF-OEz"/>
-                            <constraint firstItem="WIY-qc-2Cr" firstAttribute="top" secondItem="9ny-Jk-tUY" secondAttribute="top" id="zkI-uf-Drb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="slideUpView" destination="WIY-qc-2Cr" id="sOg-t2-abT"/>
                         <outlet property="tableView" destination="Tuy-uN-e0v" id="7hN-Ob-REN"/>
+                        <outlet property="tapView" destination="JVZ-uT-KOP" id="qbC-Xy-Rz8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMS-P3-SbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1736.8" y="118.29085457271366"/>
+            <point key="canvasLocation" x="1736.2318840579712" y="117.85714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LHT-y4-yRR">
