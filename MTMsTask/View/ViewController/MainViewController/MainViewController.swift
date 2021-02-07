@@ -9,6 +9,11 @@ import UIKit
 import MapKit
 import FirebaseFirestore
 
+protocol MainViewControllerDelegate {
+  func toggleLeftPanel()
+  func collapseSidePanels()
+}
+
 class MainViewController: UIViewController {
     var animator: UIViewPropertyAnimator?
     @IBOutlet weak var mapView: MKMapView!
@@ -22,6 +27,8 @@ class MainViewController: UIViewController {
     var destinationLocation: CLLocationCoordinate2D?
     var sourceLocation: CLLocationCoordinate2D?
     var requests = [MTMRequest]()
+
+    var delegate: MainViewControllerDelegate?
 
     func createBottomView() {
         guard let bottomViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BottomViewController") as? BottomViewController else { return }
@@ -58,5 +65,10 @@ class MainViewController: UIViewController {
         setupFirestore()
         let name = NSNotification.Name(rawValue: "BottomViewMoved")
         NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil, using: receiveNotification(_:))
+    }
+
+    // MARK: Button actions
+    @IBAction func leftBtnTapped(_ sender: Any) {
+      delegate?.toggleLeftPanel()
     }
 }

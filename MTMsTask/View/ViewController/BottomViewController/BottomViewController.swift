@@ -76,7 +76,7 @@ class BottomViewController: UIViewController, UIGestureRecognizerDelegate {
         moveToY(self.view.frame.minY + translation.y)
         recognizer.setTranslation(.zero, in: self.view)
     }
-
+    //Move the view to the limit 150 from the whole height of screen
     func maximize(completion: (() -> Void)?) {
         UIView.animate(withDuration: 0.2, animations: {
             self.moveToY(150)
@@ -86,7 +86,7 @@ class BottomViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         }
     }
-
+    //Move the view to the limit 350 from the whole height of screen
     func minimize(completion: (() -> Void)?) {
         UIView.animate(withDuration: 0.2, animations: {
             self.moveToY(self.closeThreshold)
@@ -96,7 +96,7 @@ class BottomViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         }
     }
-
+    
     private func moveToY(_ position: CGFloat) {
         view.frame = CGRect(x: 0, y: position, width: view.frame.width, height: view.frame.height)
         let maxHeight = view.frame.height - closeThresholdHeight
