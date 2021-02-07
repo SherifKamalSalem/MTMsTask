@@ -1,11 +1,9 @@
 # MTMsTask
 
-One Paragraph of project description goes here
-
-## Getting Started
-
 This is an interview task required by MTMs company.
 it's driver tracker app
+
+## Getting Started
 
 ### Installing
 
