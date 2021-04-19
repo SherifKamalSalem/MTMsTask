@@ -29,5 +29,6 @@ pod install
 
 ## Tools
 
-* [Kingfisher](https://github.com/onevcat/Kingfisher)
-* [SwiftLint](https://github.com/realm/SwiftLint)
+* [Kingfisher](https://github.com/onevcat/Kingfisher) powerful, pure-Swift library for downloading and caching images from the web.
+* [SwiftLint](https://github.com/realm/SwiftLint) tool to enforce Swift style and conventions.
+* [Cosmos](https://github.com/evgenyneu/Cosmos) tool for shows a star rating and takes rating input from the user.
