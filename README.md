@@ -45,8 +45,9 @@ func fill(with viewModel: ReviewsListItemViewModel) {
 
 ## Includes
 
-* Unit Tests for Use Cases(Domain Layer), ViewModels(Presentation Layer), NetworkService(Infrastructure Layer)
-* Size Classes and UIStackView in Detail view
+* Unit Tests for Use Cases(Domain Layer) (Tested implicitly), ViewModels(Presentation Layer), NetworkService(Infrastructure Layer)
+* UIStackView in Detail view
+* Code styling standards
 * Pagination
 
 ## Optimisations/Additions
@@ -56,6 +57,8 @@ func fill(with viewModel: ReviewsListItemViewModel) {
   Support offline mode by caching Reviews pages return from API using Core Data.  | Excellent optimization but lower priority relative to other requirements.
   Using RxSwift as binding machanism  |  While RxSwift is perfect compatibility with MVVM I prefered to use simple combination of Closure and didSet to avoid third-party dependencies especially for the scale of this assessement whoever I am used to implement MVVM with RxSwift.
   [Modularity](https://tech.olx.com/modular-architecture-in-ios-c1a1e3bff8e9)  |  Modularity is high priority especially for large scale projects but it's hard to be implemented from the beginning when the big picture isn't fully completed, for more details about modular architecture watch this https://www.youtube.com/watch?v=QzM3lsFewN4
+Setup CI/CD using Fastlane  |  Lower priority relative to other requirements.
+Add UI Testing  |  Lower priority relative to other requirements.
   Add Sorting feature |  Optional requirement and no time to implement.
   Add custom transition animations   | Lower priority relative to other requirements.
   Improve UI design   | Lower priority relative to other requirements.
@@ -65,3 +68,7 @@ func fill(with viewModel: ReviewsListItemViewModel) {
 * [Kingfisher](https://github.com/onevcat/Kingfisher) powerful, pure-Swift library for downloading and caching images from the web.
 * [SwiftLint](https://github.com/realm/SwiftLint) tool to enforce Swift style and conventions.
 * [Cosmos](https://github.com/evgenyneu/Cosmos) tool for shows a star rating and takes rating input from the user.
+
+### Any questions?
+
+* Email me on [Gmail](sherif.kamal.salem@gmail.com)
