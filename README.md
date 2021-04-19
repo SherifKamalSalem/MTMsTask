@@ -1,5 +1,5 @@
 # GetYourGuideTask
-GetYourGuideTask is an iOS application built as take-home assessment at GetYourGuide. Built Using [MVVM (Model-View-ViewModel] (https://en.wikipedia.org/wiki/Model–view–viewmodel) and Clean Architecture concepts
+GetYourGuideTask is an iOS application built as take-home assessment at GetYourGuide. Built Using [MVVM](https://en.wikipedia.org/wiki/Model–view–viewmodel) and Clean Architecture concepts
 
 ### Run Requirements
 
